@@ -63,7 +63,7 @@ META_HUB_VERIFY_TOKEN=
 META_APP_SECRET=
 ```
 
-Replace META_HUB_VERIFY_TOKEN and META_APP_SECRET with your actual Instagram Hub Verify Token and App Secret.
+Replace `META_HUB_VERIFY_TOKEN` and `META_APP_SECRET` with your actual Instagram Hub Verify Token and App Secret.
 
 ### Usage
 
