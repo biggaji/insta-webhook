@@ -3,7 +3,7 @@ const { config } = require('dotenv');
 const { genHmac, compareHmac } = require('./utils/crypto');
 const app = express();
 
-// Dotenv
+// Load environment variables
 config();
 
 app.use(express.urlencoded({ extended: false }));
@@ -17,7 +17,7 @@ app.get('/meta/webhook/verify_request', (req, res, next) => {
     const hubVerifyToken = query['hub.verify_token'];
     const hubChallenge = query['hub.challenge'];
 
-    if (!hubVerifyToken === process.env.META_HUB_VERIFY_TOKEN) {
+    if (hubVerifyToken !== process.env.META_HUB_VERIFY_TOKEN) {
       throw new Error("Verify token don't match");
     }
 
